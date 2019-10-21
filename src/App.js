@@ -1,15 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import User from './components/User'
+import ReactPlayer from 'react-player';
 
-function App() {
-  return (
+class App extends Component {
+  render  (){
+    return (
     <div className="App">
-      <header className="App-header">
-        HOLA!!
-      </header>
+     <User firstName='Poderoso'/>
+     <User firstName='Funky'/>
+     <ReactPlayer url="https://www.youtube.com/watch?v=q3kokYQrVgk"
+     playing
+     controls
+     volume='0.5'/>
     </div>
-  );
+    )}
+  ;
 }
 
 export default App;
